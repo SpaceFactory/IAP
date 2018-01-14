@@ -1,5 +1,5 @@
-#define trigPin 13
-#define echoPin 12
+#define trigPin 12
+#define echoPin 13
 
 int redPin = 2;
 int yelPin = 3;
@@ -59,12 +59,12 @@ void loop() {
     Serial.println(distance);
   }
 
-  // Note from James:
-  //  comment you favourite control
-  //  Hint: crtl + "/" ( cmd + "/" on a mac )
-
-  useRange(distance, 5, 100);
-  //  cycle();
+  // ** Note from James **
+  // useRange(distance, min, max)
+  // distance = the distance received by the rangefinder (cm)
+  // min = the distance where all LEDs will be off
+  // max = the distance where all LEDs will be on
+  useRange(distance, 5, 40);
   delay(500);
 
 }
